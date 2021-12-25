@@ -103,7 +103,7 @@ public class MainFrag extends BaseFragment {
         myACPower22 = sharedPreferences.getInt(getResources().getString(R.string.prefPowerAC22), 0);
 
 
-        lastTemp = sharedPreferences.getString(getResources().getString(R.string.last_temp), "24");
+        lastTemp = sharedPreferences.getString(getResources().getString(R.string.last_temp), "25");
     }
 
     private void onClick() {

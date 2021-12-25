@@ -12,7 +12,7 @@
         android:layout_width="60dp"
         android:layout_height="2dp"
         android:layout_gravity="center_horizontal"
-        android:background="@color/secondary_text" />
+        android:background="@color/devider" />
 
     <TextView
         android:id="@+id/tvTitleSettings"
@@ -55,6 +55,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Simpan"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         app:backgroundTint="@color/blue_dark"
         app:cornerRadius="20dp" />

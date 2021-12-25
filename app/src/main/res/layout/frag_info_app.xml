@@ -51,7 +51,7 @@
             android:layout_marginTop="-20dp"
             android:layout_marginEnd="-60dp"
             android:src="@drawable/ic_air_conditioner_outline"
-            app:tint="@color/devider" />
+            app:tint="@color/white_smoke" />
 
         <LinearLayout
             android:id="@+id/linearProfile"
@@ -62,10 +62,11 @@
 
             <ImageView
                 android:id="@+id/imgProfile"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginTop="90dp"
-                android:src="@mipmap/ic_launcher_round" />
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_smart_ac" />
 
             <TextView
                 android:layout_width="wrap_content"

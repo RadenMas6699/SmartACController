@@ -21,7 +21,7 @@ public class MainAct extends BaseActivity {
     @Override
     protected void myCodeHere() {
         DatabaseReference dbLastTemp = FirebaseDatabase.getInstance().getReference("lastTemp");
-        dbLastTemp.addListenerForSingleValueEvent(new ValueEventListener() {
+        dbLastTemp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String valTemp = snapshot.getValue().toString();
