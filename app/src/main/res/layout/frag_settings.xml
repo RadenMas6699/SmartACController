@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp">
+
+                <ImageButton
+                    android:id="@+id/imgBack"
+                    android:layout_width="30dp"
+                    android:layout_height="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    style="@style/TitleToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/imgBack"
+                    android:text="@string/settings" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Ruangan"
+                android:textAllCaps="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlRoomOne"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/ruangan_one" />
+
+                <TextView
+                    android:id="@+id/tvNameRoom1"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRoomTwo"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/ruangan_two" />
+
+                <TextView
+                    android:id="@+id/tvNameRoom2"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTitleRoom1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlNameAC11"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/air_conditioner_one" />
+
+                <TextView
+                    android:id="@+id/tvNameAC11"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNameAC12"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/air_conditioner_two" />
+
+                <TextView
+                    android:id="@+id/tvNameAC12"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTitleRoom2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlNameAC21"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/air_conditioner_one" />
+
+                <TextView
+                    android:id="@+id/tvNameAC21"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNameAC22"
+                style="@style/BoxSettings">
+
+                <TextView
+                    style="@style/TitleNameSettings"
+                    android:text="@string/air_conditioner_two" />
+
+                <TextView
+                    android:id="@+id/tvNameAC22"
+                    style="@style/TitleDescSettings" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

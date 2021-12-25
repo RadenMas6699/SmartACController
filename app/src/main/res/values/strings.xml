@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Smart AC Controller</string>
+    <string name="programmer_name">Kasmira</string>
+    <string name="pengembang">Pengembang</string>
+    <string name="prodi_name">Program Studi Pendidikan Teknik Elektro</string>
+    <string name="major_name">Jurusan Pendidikan Teknik Elektro</string>
+    <string name="faculty_name">Fakultas Teknik</string>
+    <string name="campus_name">Universitas Negeri Makassar</string>
+    <string name="years">2021</string>
+    <string name="desc">Smart AC Controller merupakan aplikasi pendukung sistem kontrol AC terpusat berbasis IOT sehingga AC dapat dikontrol dari jarak jauh sekalipun, dengan tetap terhubung dalam jaringan internet.</string>
+
+    <string name="prefAccount">myAccount</string>
+
+    <string name="prefRoomOne">myRoomOne</string>
+    <string name="prefRoomTwo">myRoomTwo</string>
+
+    <string name="prefNameAC11">myACName11</string>
+    <string name="prefNameAC12">myACName12</string>
+    <string name="prefNameAC21">myACName21</string>
+    <string name="prefNameAC22">myACName22</string>
+
+    <string name="prefPowerAC11">myACPower11</string>
+    <string name="prefPowerAC12">myACPower12</string>
+    <string name="prefPowerAC21">myACPower21</string>
+    <string name="prefPowerAC22">myACPower22</string>
+
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="kasmira">Kasmira 👋</string>
+    <string name="ruangan">Ruangan</string>
+    <string name="air_conditioner">Air Conditioner</string>
+    <string name="ac_name">acName</string>
+    <string name="ac_position">acPosition</string>
+    <string name="ac_power">acPower</string>
+    <string name="last_temp">lastTemp</string>
+    <string name="ac_on">On</string>
+    <string name="ac_off">Off</string>
+    <string name="dash">-</string>
+    <string name="room_one">Perpustakaan</string>
+    <string name="room_two">Ruang Seminar</string>
+    <string name="ac_room_one_one">Midea 1</string>
+    <string name="ac_room_one_two">Midea 2</string>
+    <string name="ac_room_two_one">Midea 3</string>
+    <string name="ac_room_two_two">Midea 4</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Pengaturan</string>
+    <string name="suhu">Suhu</string>
+    <string name="swing">Swing</string>
+    <string name="speed">Kecepatan</string>
+    <string name="pendingin">\tPendingin</string>
+    <string name="arrow_bottom">Arah Bawah</string>
+    <string name="arrow_top">Arah Atas</string>
+    <string name="arrow_center">Arah Tengah</string>
+    <string name="ruangan_one">Ruangan 1</string>
+    <string name="ruangan_two">Ruangan 2</string>
+    <string name="desc_ruangan_one">Nama Ruangan 1</string>
+    <string name="desc_ruangan_two">Nama Ruangan 2</string>
+    <string name="air_conditioner_one">Air Conditioner 1</string>
+    <string name="air_conditioner_two">Air Conditioner 2</string>
+    <string name="desc_air_conditioner_one">Nama Air Conditioner 1</string>
+    <string name="desc_air_conditioner_two">Nama Air Conditioner 2</string>
+</resources>

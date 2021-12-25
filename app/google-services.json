@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "149976811039",
+    "firebase_url": "https://ac-iot-8c66b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ac-iot-8c66b",
+    "storage_bucket": "ac-iot-8c66b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149976811039:android:44f06ac83b53a517c3b72a",
+        "android_client_info": {
+          "package_name": "com.radenmas.smart.ac.controller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149976811039-ipa3uio7m4kmg66rh720jtcqvu37updc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.radenmas.smart.ac.controller",
+            "certificate_hash": "337fefc972cfdbbf14f75a80bb8516508c199949"
+          }
+        },
+        {
+          "client_id": "149976811039-ldpnopmnpioascs984og6i2373buivcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOdu4COGJW-FQnXHrvlYS85N44buv54lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149976811039-ldpnopmnpioascs984og6i2373buivcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

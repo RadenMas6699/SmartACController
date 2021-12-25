@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_smart_ac" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfile"
+            android:layout_marginTop="12dp"
+            android:text="@string/selamat_datang"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWelcome"
+            android:text="@string/kasmira"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgSettings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/imgProfile"
+            android:layout_alignParentEnd="true"
+            android:padding="3dp"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/secondary_text" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="24dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/blue_dark">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="-64dp"
+                        android:layout_marginBottom="-5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_air_conditioner_color" />
+
+                    <TextView
+                        android:id="@+id/tvCalender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginVertical="24dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ruangan"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/air_conditioner"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleRoomOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="17sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardACOneOne"
+                            style="@style/CardACRoom"
+                            android:layout_marginStart="24dp">
+
+                            <RelativeLayout style="@style/BoxCard">
+
+                                <ImageView
+                                    android:id="@+id/imgAC1"
+                                    style="@style/IconAC" />
+
+                                <TextView
+                                    android:id="@+id/tvTitleACOneOne"
+                                    style="@style/TitleAC"
+                                    android:layout_alignTop="@id/imgAC1"
+                                    android:layout_alignBottom="@id/imgAC1"
+                                    android:layout_toEndOf="@id/imgAC1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgAC1"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgPowerAC11"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_power"
+                                        app:tint="@color/anu" />
+
+                                    <TextView
+                                        android:id="@+id/tvStatePowerAC11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="24dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_ac_unit"
+                                        app:tint="@color/secondary_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvTempAC11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardACOneTwo"
+                            style="@style/CardACRoom">
+
+                            <RelativeLayout style="@style/BoxCard">
+
+                                <ImageView
+                                    android:id="@+id/imgAC2"
+                                    style="@style/IconAC" />
+
+                                <TextView
+                                    android:id="@+id/tvTitleACOneTwo"
+                                    style="@style/TitleAC"
+                                    android:layout_alignTop="@id/imgAC2"
+                                    android:layout_alignBottom="@id/imgAC2"
+                                    android:layout_toEndOf="@id/imgAC2" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgAC2"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgPowerAC12"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_power"
+                                        app:tint="@color/anu" />
+
+                                    <TextView
+                                        android:id="@+id/tvStatePowerAC12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="24dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_ac_unit"
+                                        app:tint="@color/secondary_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvTempAC12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tvTitleRoomTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="17sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardACTwoOne"
+                            style="@style/CardACRoom"
+                            android:layout_marginStart="24dp">
+
+                            <RelativeLayout style="@style/BoxCard">
+
+                                <ImageView
+                                    android:id="@+id/imgAC3"
+                                    style="@style/IconAC" />
+
+                                <TextView
+                                    android:id="@+id/tvTitleACTwoOne"
+                                    style="@style/TitleAC"
+                                    android:layout_alignTop="@id/imgAC3"
+                                    android:layout_alignBottom="@id/imgAC3"
+                                    android:layout_toEndOf="@id/imgAC3" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgAC3"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgPowerAC21"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_power"
+                                        app:tint="@color/anu" />
+
+                                    <TextView
+                                        android:id="@+id/tvStatePowerAC21"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="24dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_ac_unit"
+                                        app:tint="@color/secondary_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvTempAC21"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardACTwoTwo"
+                            style="@style/CardACRoom">
+
+                            <RelativeLayout style="@style/BoxCard">
+
+                                <ImageView
+                                    android:id="@+id/imgAC4"
+                                    style="@style/IconAC" />
+
+                                <TextView
+                                    android:id="@+id/tvTitleACTwoTwo"
+                                    style="@style/TitleAC"
+                                    android:layout_alignTop="@id/imgAC4"
+                                    android:layout_alignBottom="@id/imgAC4"
+                                    android:layout_toEndOf="@id/imgAC4" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgAC4"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgPowerAC22"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_power"
+                                        app:tint="@color/anu" />
+
+                                    <TextView
+                                        android:id="@+id/tvStatePowerAC22"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="24dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_ac_unit"
+                                        app:tint="@color/secondary_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvTempAC22"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:textColor="@color/secondary_text" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
