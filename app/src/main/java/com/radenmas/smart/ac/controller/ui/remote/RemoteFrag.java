@@ -8,8 +8,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.radenmas.smart.ac.controller.R;
 import com.radenmas.smart.ac.controller.base.BaseFragment;
 import com.radenmas.smart.ac.controller.ui.main.MainFrag;
@@ -51,9 +56,22 @@ public class RemoteFrag extends BaseFragment {
             } else {
                 On();
             }
-
             tvTitleAC.setText(acName);
         }
+
+        DatabaseReference dbLastTemp = FirebaseDatabase.getInstance().getReference("lastTemp");
+        dbLastTemp.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String valTemp = snapshot.getValue().toString();
+                tvTemp.setText("" + valTemp);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         switch (position) {
             case 1:
@@ -159,14 +177,11 @@ public class RemoteFrag extends BaseFragment {
                 minTemp.setClickable(false);
             } else {
                 temp = temp - 1;
-                tvTemp.setText("" + temp);
                 minTemp.setClickable(true);
             }
             addTemp.setClickable(true);
             dbReff.child("Suhu").setValue(1);
             setZero("Suhu");
-//            editor.putInt(prefTemp, temp);
-//            editor.apply();
         });
 
         addTemp.setOnClickListener(view -> {
@@ -174,14 +189,11 @@ public class RemoteFrag extends BaseFragment {
                 addTemp.setClickable(false);
             } else {
                 temp = temp + 1;
-                tvTemp.setText("" + temp);
                 addTemp.setClickable(true);
             }
             minTemp.setClickable(true);
             dbReff.child("Suhu").setValue(1);
             setZero("Suhu");
-//            editor.putInt(prefTemp, temp);
-//            editor.apply();
         });
     }
 
