@@ -44,8 +44,6 @@ public class RemoteFrag extends BaseFragment {
         if (bundle != null) {
             TextView tvTitleAC = view.findViewById(R.id.tvTitleAC);
             String acName = bundle.getString(getResources().getString(R.string.ac_name));
-            String lastTemp = bundle.getString(getResources().getString(R.string.last_temp));
-            temp = Integer.parseInt(lastTemp);
 
             position = bundle.getInt(getResources().getString(R.string.ac_position));
 
@@ -116,8 +114,22 @@ public class RemoteFrag extends BaseFragment {
     }
 
     private void On() {
+        DatabaseReference dbLastTemp = FirebaseDatabase.getInstance().getReference("lastTemp");
+        dbLastTemp.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String valTemp = snapshot.getValue().toString();
+                temp = Integer.parseInt(valTemp);
+                tvTemp.setText("" + temp);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         power = 0;
-        tvTemp.setText("" + temp);
         rlTemp.setVisibility(View.VISIBLE);
         rlSwing.setVisibility(View.VISIBLE);
         rlSpeed.setVisibility(View.VISIBLE);
@@ -176,7 +188,6 @@ public class RemoteFrag extends BaseFragment {
             if (temp <= 17) {
                 minTemp.setClickable(false);
             } else {
-                temp = temp - 1;
                 minTemp.setClickable(true);
             }
             addTemp.setClickable(true);
@@ -188,7 +199,6 @@ public class RemoteFrag extends BaseFragment {
             if (temp >= 30) {
                 addTemp.setClickable(false);
             } else {
-                temp = temp + 1;
                 addTemp.setClickable(true);
             }
             minTemp.setClickable(true);
@@ -199,7 +209,6 @@ public class RemoteFrag extends BaseFragment {
 
     private void setZero(String path) {
         new Handler().postDelayed(() -> dbReff.child(path).setValue(0), 500);
-
     }
 
     private void Off() {

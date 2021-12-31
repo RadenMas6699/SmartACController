@@ -36,7 +36,7 @@ public class MainFrag extends BaseFragment {
 
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
-    private String date, myRoomOne, myRoomTwo, myACName11, myACName12, myACName21, myACName22,  lastTemp;
+    private String date, myRoomOne, myRoomTwo, myACName11, myACName12, myACName21, myACName22;
     private int myACPower11, myACPower12, myACPower21, myACPower22;
 
     private Bundle bundle = new Bundle();
@@ -84,7 +84,20 @@ public class MainFrag extends BaseFragment {
         } else {
             tvStatePowerAC.setText(getResources().getString(R.string.ac_on));
             imgPower.setColorFilter(Color.argb(255, 0, 200, 83));
-            tvTempAC.setText(lastTemp + " \u2103");
+
+            DatabaseReference dbLastTemp = FirebaseDatabase.getInstance().getReference("lastTemp");
+            dbLastTemp.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String valTemp = snapshot.getValue().toString();
+                    tvTempAC.setText(valTemp + " \u2103");
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
     }
 
@@ -101,9 +114,6 @@ public class MainFrag extends BaseFragment {
         myACPower12 = sharedPreferences.getInt(getResources().getString(R.string.prefPowerAC12), 0);
         myACPower21 = sharedPreferences.getInt(getResources().getString(R.string.prefPowerAC21), 0);
         myACPower22 = sharedPreferences.getInt(getResources().getString(R.string.prefPowerAC22), 0);
-
-
-        lastTemp = sharedPreferences.getString(getResources().getString(R.string.last_temp), "25");
     }
 
     private void onClick() {
@@ -124,7 +134,6 @@ public class MainFrag extends BaseFragment {
     private void cardACOnClick(CardView cardAC, String nameAC, int position, int power) {
         cardAC.setOnClickListener(v -> {
             bundle.putString(getResources().getString(R.string.ac_name), nameAC);
-            bundle.putString(getResources().getString(R.string.last_temp), lastTemp);
             bundle.putInt(getResources().getString(R.string.ac_position), position);
             bundle.putInt(getResources().getString(R.string.ac_power), power);
             RemoteFrag fragment = new RemoteFrag();

@@ -1,12 +1,5 @@
 package com.radenmas.smart.ac.controller.ui.main;
 
-import androidx.annotation.NonNull;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.radenmas.smart.ac.controller.R;
 import com.radenmas.smart.ac.controller.base.BaseActivity;
 
@@ -20,21 +13,6 @@ public class MainAct extends BaseActivity {
 
     @Override
     protected void myCodeHere() {
-        DatabaseReference dbLastTemp = FirebaseDatabase.getInstance().getReference("lastTemp");
-        dbLastTemp.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String valTemp = snapshot.getValue().toString();
-                editor.putString(getResources().getString(R.string.last_temp), valTemp);
-                editor.apply();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
         getSupportFragmentManager().beginTransaction().replace(R.id.contentMain, new MainFrag()).commit();
     }
 
